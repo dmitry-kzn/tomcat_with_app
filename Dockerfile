@@ -19,3 +19,19 @@ RUN cd /boxfuse-sample-java-war-hello/ && mvn package
 RUN cd /boxfuse-sample-java-war-hello/target/ && cp hello-1.0.war /usr/local/tomcat/webapps/
 #setup main docker process
 CMD ["/usr/local/tomcat/bin/catalina.sh", "run"]
+
+##### Script to execute this Dockerfile on Ubuntu ########
+# Create file.sh and put body of the script and make file executable
+# nano lesson6.sh  
+# chmod +x lesson6.sh
+
+# =========== lesson6.sh ===============
+#!/bin/bash
+# apt update
+# apt install docker.io -t
+# git clone https://github.com/dmitry-kzn/devops-school_lesson_6.git
+# cd devops-school_lesson_6/
+# docker build -t lesson6 .
+# docker run -d -p 8080:8080 --name lesson6 lesson6:latest
+# curl http://localhost:8080
+# curl http://localhost:8080/hello-1.0/
