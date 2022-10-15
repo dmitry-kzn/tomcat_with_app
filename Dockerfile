@@ -33,5 +33,6 @@ CMD ["/usr/local/tomcat/bin/catalina.sh", "run"]
 # cd devops-school_lesson_6/
 # docker build -t lesson6 .
 # docker run -d -p 8080:8080 --name lesson6 lesson6:latest
+# sleep 7
 # curl http://localhost:8080
 # curl http://localhost:8080/hello-1.0/
