@@ -1,10 +1,10 @@
 FROM ubuntu:20.04
 #install working environment
 RUN apt update
-RUN install default-jdk -y
-RUN install maven -y
-RUN install git -y
-RUN install tomcat9 -y
+RUN apt install default-jdk -y
+RUN apt install maven -y
+RUN apt install git -y
+RUN apt install tomcat9 -y
 #Apache  should listen port 8080
 EXPOSE 8080
 #prepare code for package by Maven 
