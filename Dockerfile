@@ -2,6 +2,8 @@ FROM ubuntu:20.04
 #install working environment
 RUN apt update -y
 #RUN apt upgrade -y
+###prevent user interaction while Configuring tzdata
+RUN DEBIAN_FRONTEND=noninteractive TZ=Europe/Paris apt-get -y install tzdata
 RUN apt install -y openjdk-11-jdk wget git maven
 #Tomcat installation
 RUN mkdir /usr/local/tomcat
