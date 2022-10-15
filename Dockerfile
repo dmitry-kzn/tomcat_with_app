@@ -8,7 +8,6 @@ RUN apt install tomcat9 -y
 #Apache  should listen port 8080
 EXPOSE 8080
 #prepare code for package by Maven 
-RUN ssh-keyscan -H github.com >> ~/.ssh/known_hosts
 RUN git clone https://github.com/boxfuse/boxfuse-sample-java-war-hello.git
 RUN cd boxfuse-sample-java-war-hello/
 #package code by Maven
