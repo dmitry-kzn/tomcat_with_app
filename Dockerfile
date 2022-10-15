@@ -28,7 +28,7 @@ CMD ["/usr/local/tomcat/bin/catalina.sh", "run"]
 # =========== lesson6.sh ===============
 #!/bin/bash
 # apt update
-# apt install docker.io -t
+# apt install docker.io -y
 # git clone https://github.com/dmitry-kzn/devops-school_lesson_6.git
 # cd devops-school_lesson_6/
 # docker build -t lesson6 .
