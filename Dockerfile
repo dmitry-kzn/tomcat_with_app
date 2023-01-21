@@ -7,9 +7,9 @@ RUN DEBIAN_FRONTEND=noninteractive TZ=Europe/Paris apt-get -y install tzdata
 RUN apt install -y openjdk-11-jdk wget git maven
 #Tomcat installation
 RUN mkdir /usr/local/tomcat
-RUN wget https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.68/bin/apache-tomcat-9.0.68.tar.gz -O /tmp/tomcat.tar.gz
+RUN wget https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.71/bin/apache-tomcat-9.0.71.tar.gz -O /tmp/tomcat.tar.gz
 RUN cd /tmp && tar xvfz tomcat.tar.gz
-RUN cp -Rv /tmp/apache-tomcat-9.0.68/* /usr/local/tomcat/
+RUN cp -Rv /tmp/apache-tomcat-9.0.71/* /usr/local/tomcat/
 #Apache  should listen port 8080
 EXPOSE 8080
 #prepare code for package by Maven & run it by Mavem
